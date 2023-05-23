@@ -1,0 +1,203 @@
+Compiling tests: fsoares
+c4a11c10% francinette 
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                Welcome to Francinette, a 42 tester framework!                ║
+╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
+                        ║             libft            ║
+                        ╚══════════════════════════════╝
+✔ Preparing framework
+✔ Executing: norminette
+✔ Executing: make fclean all (no bonus)
+ℹ Executing: libft-war-machine (https://github.com/y3ll0w42/libft-war-machine)
+--------------------------------------------------------------------------------
+|                              COMPILING LIBFT                                 |
+--------------------------------------------------------------------------------
+rules:
+all        $(NAME)       fclean       re           clean       bonus     libft.a
+ok         ok            ok           ok           ok          fail      found
+
+FUNCTION         TESTS                RESULT
+ft_isalpha       ✓✓✓✓✓✓✓              OK
+ft_isdigit       ✓✓✓✓✓✓✓              OK
+ft_isalnum       ✓✓✓✓✓✓✓              OK
+ft_isascii       ✓✓✓✓✓✓✓✓             OK
+ft_isprint       ✓✓✓✓✓✓✓              OK
+ft_strlen        ✓✓✓✓✓✓               OK
+ft_memset        ✓✓✓✓                 OK
+ft_bzero         ✓✓                   OK
+ft_memcpy        ✓✓✓                  OK
+ft_memmove       ✓✓✓✓✓                OK
+ft_strlcpy       ✓✓✓✓✓                OK
+ft_strlcat       ✓✓✓✓✓✓✓✓✓            OK
+ft_toupper       ✓✓✓✓✓✓✓              OK
+ft_tolower       ✓✓✓✓✓✓✓              OK
+ft_strchr        ✓✓✓✓✓✓               OK
+ft_strrchr       ✓✓✓✓✓✓✓✓             OK
+ft_strncmp       ✓✓✓✓✓✓✓✓✓✓✓          OK
+ft_memchr        ✓✓✓✓✓✓               OK
+ft_memcmp        ✓✓✓✓✓✓✓✓✓            OK
+ft_strnstr       ✓✓✓✓✓✓✓✓✓✓           OK
+ft_atoi          ✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓✓  OK
+ft_calloc        ✓                    OK
+ft_strdup        ✓                    OK
+ft_substr        ✓✓✓✓✓                OK
+ft_strjoin       ✓✓✓✓                 OK
+ft_strtrim       ✓✓✓✓✓                OK
+ft_split         ✓✓✓✓✓✓               OK
+ft_itoa          ✓✓✓✓✓✓✓✓✓✓           OK
+ft_strmapi       ✓                    OK
+ft_putchar_fd    ✓✓✓✓✓✓✓              OK
+ft_putstr_fd     ✓✓✓✓                 OK
+ft_putendl_fd    ✓✓✓✓                 OK
+ft_putnbr_fd     ✓✓✓✓✓✓✓✓✓            OK
+
+✔ Compiling tests: libftTester (https://github.com/Tripouille/libftTester)
+ℹ Testing:
+ft_isalpha      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
+ft_isdigit      : 1.OK 2.OK 3.OK 4.OK 
+ft_isalnum      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 
+ft_isascii      : 1.OK 2.OK 3.OK 4.OK 
+ft_isprint      : 1.OK 2.OK 3.OK 4.OK 
+ft_strlen       : 1.OK 2.OK 
+ft_memset       : 1.OK 2.OK 
+ft_bzero        : 1.OK 2.OK 3.OK 
+ft_memcpy       : 1.OK 2.OK 3.OK 
+ft_memmove      : 1.OK 2.OK 3.OK 4.OK 
+ft_strlcpy      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 
+ft_strlcat      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 
+ft_toupper      : 1.OK 2.OK 3.OK 4.OK 
+ft_tolower      : 1.OK 2.OK 3.OK 4.OK 
+ft_strchr       : 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_strrchr      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
+ft_strncmp      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 
+ft_memchr       : 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_memcmp       : 1.OK 2.OK 3.OK 4.OK 5.OK 
+ft_strnstr      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 
+ft_atoi         : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 
+ft_calloc       : 1.OK 2.MOK 
+ft_strdup       : 1.OK 2.MOK 3.OK 4.MOK 
+ft_substr       : 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 13.OK 14.MOK 15.OK 16.MOK 
+ft_strjoin      : 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 
+ft_strtrim      : 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 13.OK 14.MOK 15.OK 16.MOK 
+ft_split        : 1.MOK 2.OK 3.MOK 4.OK 5.MOK 6.OK 7.OK 8.OK 9.OK 10.OK 11.MOK 12.OK 13.OK 14.MOK 15.OK 16.MOK 17.OK 18.OK 19.MOK 20.OK 21.OK 22.MOK 23.OK 24.OK 25.MOK 26.OK 27.MOK 28.OK 29.MOK 30.OK 31.MOK 32.OK 33.MOK 34.OK 35.MOK 36.OK 37.MOK 38.OK 39.MOK 40.OK 41.MOK 42.OK 
+ft_itoa         : 1.OK 2.MOK 3.OK 4.MOK 5.OK 6.MOK 7.OK 8.MOK 9.OK 10.MOK 11.OK 12.MOK 
+ft_strmapi      : 1.OK 2.MOK 3.OK 4.MOK 
+ft_putchar_fd   : 1.OK 2.TIMEOUT
+ft_putstr_fd    : 1.OK 2.TIMEOUT
+ft_putendl_fd   : 1.OK 2.TIMEOUT
+ft_putnbr_fd    : 1.OK 2.TIMEOUT
+
+
+Errors in:
+
+For /nfs/homes/gdurmaz/francinette/tests/libft/Tripouille/tests/ft_putchar_fd_test.cpp:
+
+For /nfs/homes/gdurmaz/francinette/tests/libft/Tripouille/tests/ft_putstr_fd_test.cpp:
+
+For /nfs/homes/gdurmaz/francinette/tests/libft/Tripouille/tests/ft_putendl_fd_test.cpp:
+
+For /nfs/homes/gdurmaz/francinette/tests/libft/Tripouille/tests/ft_putnbr_fd_test.cpp:
+TIMEOUT 33:     /* 2 */ check(!strcmp(s, "10")); showLeaks();
+
+✖ Compiling tests: libft-unit-test (https://github.com/alelievr/libft-unit-test)
+ar: creating libft.a
+make[1]: *** No rule to make target 'bonus'.  Stop.
+gcc: error: *.o: No such file or directory
+gcc: fatal error: no input files
+compilation terminated.
+make[1]: *** [Makefile:97: so] Error 1
+make: *** [Makefile:161: libft.so] Error 2
+
+Problem compiling tests
+✔ Compiling tests: fsoares (my own)
+ℹ Testing:
+ft_isalpha      : OK
+ft_isdigit      : OK
+ft_isalnum      : OK
+ft_isascii      : OK
+ft_isprint      : OK
+ft_strlen       : OK
+ft_memset       : OK
+ft_bzero        : OK
+ft_memcpy       : OK
+ft_memmove      : OK
+ft_strlcpy      : OK
+ft_strlcat      : OK
+ft_toupper      : OK
+ft_tolower      : OK
+ft_strchr       : OK
+ft_strrchr      : OK
+ft_strncmp      : OK
+ft_memchr       : OK
+ft_memcmp       : OK
+ft_strnstr      : OK
+ft_atoi         : OK
+ft_calloc       : KO
+ft_strdup       : OK
+ft_substr       : KO
+ft_strjoin      : OK
+ft_strtrim      : KO
+ft_split        : OK
+ft_itoa         : OK
+ft_strmapi      : OK
+
+Errors found:
+For ft_calloc, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_calloc.c:
+
+Error in test 3: ft_calloc(10, 8): different memory
+expected:
+0000: 0000 0000 0000 0000 0000 0000 0000 0000 ->  ................
+0010: 0000 0000 0000 0000 0000 0000 0000 0000 ->  ................
+0020: 0000 0000 0000 0000 0000 0000 0000 0000 ->  ................
+0030: 0000 0000 0000 0000 0000 0000 0000 0000 ->  ................
+0040: 0000 0000 0000 0000 0000 0000 0000 0000 ->  ................
+yours:
+0000: 0000 0000 0000 0000 0000 1111 1111 1111 ->  ................
+
+Error in test 3: ft_calloc(10, 8): 
+Memory leak: 0x558efc0639b0 - 8192 bytes
+You failed to free the memory allocated at:
+
+For ft_substr, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_substr.c:
+
+Error in test 1: ft_substr("", 0, 0): expected: "", got: "\021"
+Error in test 1: ft_substr("", 0, 0): 
+Memory leak: 0x557c820418b0 - 8192 bytes
+You failed to free the memory allocated at:
+Error in test 2: ft_substr("", 0, 1): expected: "", got: "\021 \310W\005"
+Error in test 3: ft_substr("", 1, 1): expected: "", got: "\021 \310W\005"
+Error in test 4: ft_substr("hola", 4294967295, 0): expected: "", got: "\021 \310W\005"
+Error in test 6: ft_substr("hola", 4294967295, 18446744073709551615): expected: "", got: "\021 \310W\005"
+Error in test 7: ft_substr("hola", 0, 0): expected: "", got: "\021 \310W\005"
+Error in test 12: ft_substr("hola", 2, 0): expected: "", got: "\021 \310W\005"
+Error in test 17: ft_substr("hola", 3, 0): expected: "", got: "\021 \310W\005"
+Error in test 20: ft_substr("hola", 4, 0): expected: "", got: "\021 \310W\005"
+Error in test 23: ft_substr("hola", 5, 2): expected: "", got: "\021 \310W\005"
+
+For ft_strtrim, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_strtrim.c:
+
+Error in test 1: ft_strtrim("", ""): expected: "", got: "\021"
+Error in test 1: ft_strtrim("", ""): 
+Memory leak: 0x559f71f2a8b0 - 8192 bytes
+You failed to free the memory allocated at:
+Error in test 3: ft_strtrim("", "cdef"): expected: "", got: "\021\037\367Y\005"
+
+For ft_putchar_fd, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_putchar_fd.c:
+
+For ft_putstr_fd, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_putstr_fd.c:
+
+For ft_putendl_fd, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_putendl_fd.c:
+
+For ft_putnbr_fd, in /nfs/homes/gdurmaz/francinette/tests/libft/fsoares/test_putnbr_fd.c:
+
+
+
+Summary: no bonus
+
+Missing functions: striteri
+
+Failed tests: putendl_fd, strtrim, ft_putchar_fd, ft_putendl_fd, ft_putnbr_fd, putstr_fd, putnbr_fd, ft_putstr_fd, putchar_fd, libft-unit-test, substr, calloc
+
+Passed tests: isalpha, isdigit, isalnum, isascii, isprint, strlen, memset, bzero, memcpy, memmove, strlcpy, strlcat, toupper, tolower, strchr, strrchr, strncmp, memchr, memcmp, strnstr, atoi, strdup, strjoin, split, itoa, strmapi
+c4a11c10% 
+c4a11c10% 
