@@ -51,3 +51,21 @@ int main(void)
 	return (0);
 }
 */
+/*
+	s parametresi ile gosterilen karakter dizisinde c parametresi
+	ile gosterilen degerin ilk gectigi zeri arar ve bu bellek
+	adresini gosteren bir isaretci geri dondurur.
+
+	Eger s parametresi sonu bos karakter olan bir karakter
+	dizisini gosteren isaretci degilse anlamsiz bi sonuc elde
+	edilir.
+
+	c: Aranacak olan degeri gosterir. Deger int olarak verilir.
+	Ancak fonksiyon bu degeri unsigned char bir degere cevirerek
+	islem yapar.
+
+	Return: s parametre degeri ile gosterilen karakter dizisinde
+	bulunan ilk c parametres degerinin bellek adresini gosteren 
+	bir isaretci geri dondurur. Deger bulunmazsa, NULL bir isaretci
+	geri dondurur.
+*/
