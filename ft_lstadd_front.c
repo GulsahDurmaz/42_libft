@@ -3,19 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchallie <rchallie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gdurmaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 12:09:04 by rchallie          #+#    #+#             */
-/*   Updated: 2019/10/19 14:42:04 by rchallie         ###   ########.fr       */
+/*   Created: 2023/05/27 19:42:03 by gdurmaz           #+#    #+#             */
+/*   Updated: 2023/05/27 19:42:09 by gdurmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **alst, t_list *new)
+/*
+	This function lets us add a new element to the front of an existing list.
+	*set the new element's next address to point 
+ 	* to the start of the existing list
+	*set the existing list pointer to point to the new element
+*/
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!alst || !new)
-		return ;
-	new->next = *alst;
-	*alst = new;
+	if (lst || new)
+	{
+		if (*lst)
+			new -> next = *lst;
+		*lst = new;
+	}
 }

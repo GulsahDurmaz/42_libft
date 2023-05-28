@@ -11,29 +11,37 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+/*
+	* RETURN 
+	The new list.
+	NULL if the allocation fails.
+
+	* Iterates the list ’lst’ and applies the function
+	’f’ on the content of each node. Creates a new
+	list resulting of the successive applications of
+	the function ’f’. The ’del’ function is used to
+	delete the content of a node if needed.
+
+	* This functions works similarly as the ft_lstiter function, 
+	but it creates a new list resulting of the successive 
+	applications of f on each element's content.
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_list;
-	t_list	*save;
+	t_list	*tmp;
 
-	if (!lst || !f || !del)
-		return (0);
-	new_list = ft_lstnew(f(lst->content));
-	if (!new_list)
-		return (0);
-	save = new_list;
-	lst = lst->next;
+	new_list = 0;
 	while (lst)
 	{
-		new_list->next = ft_lstnew(f(lst->content));
-		if (!new_list->next)
+		tmp = ft_lstnew(f(lst->content));
+		if (!tmp)
 		{
-			ft_lstclear(&save, del);
+			ft_lstclear(&new_list, del);
 			return (0);
 		}
-		new_list = new_list->next;
+		ft_lstadd_back(&new_list, tmp);
 		lst = lst->next;
 	}
-	new_list->next = NULL;
-	return (save);
+	return (new_list);
 }

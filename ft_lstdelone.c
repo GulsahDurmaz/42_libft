@@ -3,19 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rchallie <rchallie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gdurmaz <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/17 15:00:36 by rchallie          #+#    #+#             */
-/*   Updated: 2019/10/19 19:30:37 by rchallie         ###   ########.fr       */
+/*   Created: 2023/05/27 19:42:35 by gdurmaz           #+#    #+#             */
+/*   Updated: 2023/05/27 19:42:41 by gdurmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+	*lst: The node to free.
+	del: The address of the function used to delete
+	the content
+*/
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst || !del)
-		return ;
-	(del)(lst->content);
-	free(lst);
+	if (lst)
+	{
+		del(lst->content);
+		free(lst);
+	}
 }

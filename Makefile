@@ -1,94 +1,51 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
+#    Makefile.txt                                       :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: gdurmaz <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/24 19:00:38 by gdurmaz           #+#    #+#              #
-#    Updated: 2023/05/24 19:00:47 by gdurmaz          ###   ########.fr        #
+#    Created: 2023/05/26 18:32:08 by gdurmaz           #+#    #+#              #
+#    Updated: 2023/05/26 18:32:14 by gdurmaz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 		ft_memset.c		\
-		ft_bzero.c			\
-		ft_memcpy.c			\
-		ft_memmove.c 		\
-		ft_memchr.c			\
-		ft_memcmp.c			\
-		ft_strlen.c			\
-		ft_isalpha.c 		\
-		ft_isdigit.c		\
-		ft_isalnum.c		\
-		ft_isascii.c		\
-		ft_isprint.c		\
-		ft_toupper.c		\
-		ft_tolower.c		\
-		ft_strchr.c			\
-		ft_strrchr.c		\
-		ft_strncmp.c		\
-		ft_strlcpy.c		\
-		ft_strlcat.c		\
-		ft_strnstr.c		\
-		ft_atoi.c			\
-		ft_calloc.c			\
-		ft_strdup.c			\
-		ft_substr.c			\
-		ft_strjoin.c 		\
-		ft_strtrim.c		\
-		ft_split.c			\
-		ft_itoa.c			\
-		ft_strmapi.c		\
-		ft_striteri.c		\
-		ft_putchar_fd.c		\
-		ft_putstr_fd.c		\
-		ft_putendl_fd.c		\
-		ft_putnbr_fd.c
+SRCS			=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
+					ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c \
+					ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c \
+					ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
+					ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
+					ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c \
+					ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c \
+					ft_tolower.c ft_toupper.c \
+					    
+OBJS			= $(SRCS:.c=.o)
 
-SRCSB =	ft_lstnew.c		\
-		ft_lstadd_front.c	\
-		ft_lstsize.c		\
-		ft_lstlast.c		\
-		ft_lstadd_back.c	\
-		ft_lstclear.c		\
-		ft_lstdelone.c		\
-		ft_lstiter.c		\
-		ft_lstmap.c		\
-		$(SRCS)
+BONUS			=	ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c \
+					ft_lstdelone.c ft_lstiter.c ft_lstlast.c \
+					ft_lstmap.c ft_lstnew.c ft_lstsize.c
+BONUS_OBJS		= $(BONUS:.c=.o)
 
-NAME = libft.a
+CC				= gcc
+RM				= rm -f
+CFLAGS			= -Wall -Wextra -Werror -I.
 
-OBJS_DIR = objs/
-OBJS = $(SRCS:.c=.o)
-OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
+NAME			= libft.a
 
-OBJSB = $(SRCSB:.c=.o)
-OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
+all:			$(NAME)
 
-CC = clang
-
-CC_FLAGS = -Wall -Wextra -Werror
-
-$(OBJS_DIR)%.o : %.c libft.h
-	@mkdir -p $(OBJS_DIR)
-	@echo "Compiling: $<"
-	@clang $(CC_FLAGS) -c $< -o $@
-
-$(NAME): $(OBJECTS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_PREFIXED)
-	@echo "Libft Done !"
-
-all: $(NAME)
+$(NAME):		$(OBJS)
+				ar rcs $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJS_DIR)
+				$(RM) $(OBJS) $(BONUS_OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re: fclean all
+re:				fclean $(NAME)
 
-bonus: $(OBJECTS_BONUS_PREFIXED)
-	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
-	@echo "Libft Bonus Done !"
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
+.PHONY:			all clean fclean re bonus

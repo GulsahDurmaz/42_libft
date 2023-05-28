@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
+/*
 int	ft_isalpha(int c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
@@ -25,7 +25,7 @@ int	ft_isdigit(int c)
 		return (2048);
 	else
 		return (0);
-}
+}*/
 
 int	ft_isalnum(int c)
 {
@@ -34,7 +34,7 @@ int	ft_isalnum(int c)
 	else
 		return (8);
 }
-/*	
+/*
 #include <ctype.h>		
 int main(void)
 {

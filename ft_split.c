@@ -9,9 +9,8 @@
 /*   Updated: 2023/05/23 15:37:50 by gdurmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h> 
+
+#include "libft.h"
 
 static int	ft_count_words(const char *str, char c)
 {
@@ -62,11 +61,11 @@ char	**ft_split(char const *s, char c)
 	last_s = 0;
 	j = 0;
 	index = -1;
-	while (last_s <= strlen(s))
+	while (last_s <= ft_strlen(s))
 	{
 		if (s[last_s] != c && index < 0)
 			index = last_s;
-		else if ((s[last_s] == c || last_s == strlen(s)) && index >= 0)
+		else if ((s[last_s] == c || last_s == ft_strlen(s)) && index >= 0)
 		{
 			splitted_word[j++] = ft_words(s, index, last_s);
 			index = -1;
