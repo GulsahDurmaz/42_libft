@@ -9,7 +9,6 @@
 /*   Updated: 2023/05/23 15:37:50 by gdurmaz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
 static int	ft_count_words(const char *str, char c)
@@ -75,6 +74,7 @@ char	**ft_split(char const *s, char c)
 	splitted_word[j] = 0;
 	return (splitted_word);
 }
+
 /*
 int main()
 {

@@ -11,40 +11,48 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_numlen(int n, int base)
+static int	length(int nb)
 {
-	int	count;
+	int	len;
 
-	count = 0;
-	if (n <= 0)
-		++count;
-	while (n && ++count)
-		n /= base;
-	return (count);
+	if (nb == 0)
+		return (1);
+	len = 0;
+	if (nb < 0)
+		len = 1;
+	while (nb)
+	{
+		len++;
+		nb = nb / 10;
+	}
+	return (len);
 }
 
 char	*ft_itoa(int n)
 {
-	int			len;
-	char		*ret;
-	const char	*digits = "0123456789";
+	char			*str;
+	int				len;
+	unsigned int	num;
 
-	len = ft_numlen(n, 10);
-	ret = malloc(sizeof(char) * (len + 1));
-	if (!ret)
-		return (0);
-	ret[len] = 0;
-	if (n == 0)
-		ret[0] = '0';
+	len = length(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	len--;
+	str[len] = '0';
 	if (n < 0)
-		ret[0] = '-';
-	while (n)
 	{
-		if (n > 0)
-			ret[--len] = digits[n % 10];
-		else
-			ret[--len] = digits[n % 10 * -1];
-		n /= 10;
+		str[0] = '-';
+		num = -n;
 	}
-	return (ret);
+	else
+		num = n;
+	while (num)
+	{
+		str[len] = ('0' + (num % 10));
+		num = num / 10;
+		len--;
+	}
+	return (str);
 }

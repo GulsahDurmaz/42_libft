@@ -11,6 +11,13 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+/*
+	*Src parametresi ile gösterilen bellek bölgesindeki karakterleri, 
+	n parametre değeri kadar uzunlukta, dest parametresindeki bellek 
+	bölgesine kopyalar.
+	*Eğer dest veya src parametrelerinden birisi NULL bir işaretçi ise, 
+	belirsiz sonuçlar elde edilir.
+*/
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*dst_tmp;

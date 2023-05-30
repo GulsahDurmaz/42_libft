@@ -24,3 +24,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
+
+/*
+	*Ptr parametresi ile gösterilen bellek bölgesinin n parametre değeri 
+	kadar ilk byte'ında c parametresi ile gösterilen değerin (unsigned 
+	char olarak değerlendirilir) ilk geçtiği yeri arar ve bu bellek 
+	adresini gösteren bir işaretçi geri döndürür.
+	*Eğer ptr parametresi NULL bir işaretçi ise anlamsız bir sonuç 
+	elde edilir.
+*/

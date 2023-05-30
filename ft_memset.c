@@ -11,6 +11,12 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+/*
+	*C parametresi ile gösterilen bellek bölgesindeki karakteri (unsigned char),
+	dest parametresindeki bellek bölgesinin ilk n parametre değeri kadar 
+	byte'ına kopyalar.
+	*Eğer dest parametresi NULL bir işaretçi ise, belirsiz sonuçlar elde edilir.
+*/
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*pointer;
